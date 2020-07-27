@@ -92,7 +92,7 @@ set "CATALINA_OPTS=-javaagent:/path/to/skywalking-agent/skywalking-agent.jar"
 `logging.file_name`|日志文件名|`skywalking-api.log`|
 `logging.output`| 日志输出. 默认是文件. 使用控制台意味着输出到标准输出. |`FILE`|
 `logging.dir`|日志目录。默认为空串，表示使用"system.out"输出日志。|`""`|
-`logging.pattern `|日志格式. 所有的转换说明符: <br>&nbsp;&nbsp;* `%level` means log level. <br>&nbsp;&nbsp;*  `%timestamp` 表示现在的时间格式 `yyyy-MM-dd HH:mm:ss:SSS`.<br>&nbsp;&nbsp;*   `%thread` 表示当前线程的名称.<br>&nbsp;&nbsp;*   `%msg` 表示用户记录的某些消息. <br>&nbsp;&nbsp;*  `%class` 表示TargetClass的SimpleName. <br>&nbsp;&nbsp;*  `%throwable` 表示用户抛出的异常. <br>&nbsp;&nbsp;*  `%agent_name` 表示 `agent.service_name`  |`%level %timestamp %thread %class : %msg %throwable`|
+`logging.pattern `|日志格式. 所有的转换说明符: `%level` means log level.   `%timestamp` 表示现在的时间格式 `yyyy-MM-dd HH:mm:ss:SSS`  `%thread` 表示当前线程的名称. `%msg` 表示用户记录的某些消息.   `%class` 表示TargetClass的SimpleName.  `%throwable` 表示用户抛出的异常.  `%agent_name` 表示 `agent.service_name`  |`%level %timestamp %thread %class : %msg %throwable`|
 `logging.max_file_size`|日志文件的最大大小。当日志文件大小超过这个数，归档当前的日志文件，将日志写入到新文件。|`300 * 1024 * 1024`|
 `logging.max_history_files`|The max history log files. When rollover happened, if log files exceed this number,then the oldest file will be delete. Negative or zero means off, by default.|`-1`|
 
